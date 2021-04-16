@@ -95,6 +95,7 @@ ___
 3. Create file obj.data in the directory _yoltv4/darknet/data_ containing necessary files.  For example:
 
 	_/yoltv4/darknet/data/rareplanes_test.data_
+	
         classes = 30
         train = 
         valid =  /local_data/cosmiq/wdata/rareplanes/test/txt/test.txt
