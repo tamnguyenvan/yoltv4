@@ -219,6 +219,13 @@ def precision_calc(proposal_polygons_dir, gt_polygons_dir,
     if len(geojson_names_subset) > 0:
         os.chdir(proposal_polygons_dir)
         proposal_geojsons = geojson_names_subset
+        # make sure proposal geojsons exist
+        proposal_geojsons = []
+        for name_tmp in geojson_names_subset:
+            if os.path.exists(os.path.join(proposal_polygons_dir, name_tmp)):
+                proposal_geojsons.append(name_tmp)
+            else:
+                print("Warning, missing proposal file for precision_calc():", name_tmp)
     else:
         os.chdir(proposal_polygons_dir)
         search = "*" + file_format
