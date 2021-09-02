@@ -1404,7 +1404,7 @@ def execute(pred_dir='/root/darknet/results/',
     df_raw = df_raw[df_raw['prob'] >= detection_thresh]
     
     # get image path
-    im_path_list = [os.path.join(raw_im_dir, im_name + '.tif') for 
+    im_path_list = [os.path.join(raw_im_dir, im_name + '.jpg') for 
                         im_name in df_raw['im_name_root'].values]
     df_raw['image_path'] = im_path_list
     
@@ -1450,7 +1450,7 @@ def execute(pred_dir='/root/darknet/results/',
     for i,im_name in enumerate(im_names_tiled):
         if verbose:
             print(i, "/", len(im_names_tiled), im_name)
-        im_path = os.path.join(raw_im_dir, im_name + '.tif' )
+        im_path = os.path.join(raw_im_dir, im_name + '.jpg' )
         outfile_plot_image = os.path.join(plot_dir, im_name + '.jpg')
         outfile_geojson_geo = os.path.join(geojson_geo_dir, im_name + '.geojson')
         outfile_geojson_pix = os.path.join(geojson_pix_dir, im_name + '.geojson')
