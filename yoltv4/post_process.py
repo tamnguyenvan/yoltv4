@@ -1622,7 +1622,7 @@ if __name__ == "__main__":
             out_geojson_geo_dir=args.out_geojson_geo_dir,
             out_geojson_pix_dir=args.out_geojson_pix_dir,
             plot_dir=args.plot_dir,
-            groupby=args.groubpy,
+            groupby=args.groupby,
             groupby_cat=args.groupby_cat,
             edge_buffer_test=1,
             plot_gt_labels_switch=True,
